@@ -4,13 +4,13 @@ FROM python:3.12-slim
 # 2. Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# 3. Copiar el archivo de dependencias primero
+# 3. Copiar el archivo de dependencias
 COPY requirements.txt .
 
 # 4. Instalar las librerías necesarias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Copiar el resto de tus archivos (el código app.py y el CSV) al contenedor
+# 5. Copiar el resto de tus archivos al contenedor (.py y .csv)
 COPY . .
 
 # 6. Exponer el puerto estándar de Streamlit
