@@ -75,7 +75,7 @@ try:
     st.divider()
     
     # --- GRÁFICO 1: Zonas con más papeletas (Fila 1 - Ancho Completo) ---
-    st.subheader("📍 Análisis por Ubicación")
+    st.subheader("Análisis por Ubicación")
     if not df_filtrado.empty:
         top_zonas = df_filtrado['Lugar de Intervencion'].value_counts().head(15).reset_index()
         top_zonas.columns = ['Lugar de Intervención', 'Cantidad']
